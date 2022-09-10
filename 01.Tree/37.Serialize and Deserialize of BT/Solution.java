@@ -7,7 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class Codec {
+public class Solution {
 
     
     void helper (TreeNode node , StringBuilder sb)

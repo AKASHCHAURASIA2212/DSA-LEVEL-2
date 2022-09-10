@@ -1,18 +1,18 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+import java.util.*;
+//  Definition for a binary tree node.
+ public class TreeNode {
+     int val;
+     TreeNode left;
+     TreeNode right;
+     TreeNode() {}
+     TreeNode(int val) { this.val = val; }
+     TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+         this.left = left;
+         this.right = right;
+      }
+ }
+ 
 // morris treversl
  // steps 
  //  1. if node.left == null
@@ -24,6 +24,7 @@
  //      2.3 if left is procssed
  //      2.4 iop.right = null ,print and go to right 
  class Solution {
+
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> val = new ArrayList<>();
         TreeNode curr = root ;
@@ -36,8 +37,7 @@
                curr=curr.right;
            }
             else
-            {
-                
+            {       
                 TreeNode iop = curr.left;
                 while(iop.right!=null && iop.right!=curr)
                     iop=iop.right;
